@@ -1,17 +1,18 @@
 
-import { printMessage, inchToCm, getBmi, findMax } from './utilities.js';
+import { printMessage, inchToCm, getBmi, sumValues } from './utility.js';
 
 
-printWelcome('John', 'Doe'); 
+printMessage('Md Anwarul', 'Kabir'); 
 
-const celsius = 25;
-const fahrenheit = celsiusToFahrenheit(celsius);
-console.log(`${celsius}°C is ${fahrenheit}°F`); 
+const inch = 25;
+const fahrenheit = inchToCm(inch);
+console.log(`${inch} inch = ${fahrenheit} cm`); 
 
-const num = 5;
-const fact = factorial(num);
-console.log(`The factorial of ${num} is ${fact}`); 
+const weightKg = 65;
+const heightM=1.20;
+const bmi = Math.round(getBmi(weightKg,heightM)*100)/100;
+console.log(`Your BMI is ${bmi}`); 
 
-const numbers = [1, 5, 3, 9, 2];
-const max = sumValues(numbers);
-console.log(`The maximum number is ${max}`); 
+const numbers = [1, 5, 7, 9, 11];
+const sum = sumValues(numbers);
+console.log(`The sum of your numbers is ${sum}`); 
